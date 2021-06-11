@@ -18,8 +18,18 @@ class Sweepstakes:
             self.contestants= response
             print(f'You are now registered! {self.registration_number}')
 
-        def pick_winner(self, contestant):
-        # //// should return a contestant object////
+            def pick_winner(self):
+                winner = user_interface.get_random_number(0, len(self.contestants))
+                return winner
 
+        def print_contestant_info(self):
+            contestant_num = self.pick_winner()
+            contestant_info = self.contestants[contestant_num]
+            self.name = contestant_info["first_name"]
+            print(self.name)
 
-        def print_contestant_info(self, contestant):
+sweepstakes = Sweepstakes()
+sweepstakes.register_contestant()
+sweepstakes.register_contestant()
+sweepstakes.register_contestant()
+sweepstakes.print_contestant_info()

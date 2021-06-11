@@ -1,4 +1,4 @@
-from marketing_firm_creator import MarketingFirmCreator
+from marketing_firm import MarketingFirmCreator
 
 class MarketingFirm:
 
